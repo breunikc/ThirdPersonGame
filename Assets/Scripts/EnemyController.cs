@@ -4,18 +4,20 @@ using System.Collections;
 public class EnemyController : MonoBehaviour
 {
 
-    public Transform target;
+    Transform player;
+    NavMeshAgent nav;
 
     // Use this for initialization
     void Start()
     {
-
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        nav = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.GetComponent<NavMeshAgent>().destination = target.position;
+        nav.SetDestination(player.position);
     }
 
 }

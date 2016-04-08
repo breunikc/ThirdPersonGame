@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
     
     private Animator animator;
     private Vector3 moveDirection = Vector3.zero;
